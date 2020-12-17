@@ -1,65 +1,120 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import {
+  Box,
+  Text,
+  Badge,
+  UnorderedList,
+  ListItem,
+  ListIcon,
+  Tooltip,
+  Link,
+  Divider,
+} from "@chakra-ui/react";
+import App from "../components/App";
+
+const SKILLS = {
+  html: "red.500",
+  css: "blue.500",
+  scss: "red.300",
+  javascript: "yellow.700",
+  git: "red.400",
+};
+
+const FRAMEWORK = {
+  react: "blue.500",
+  laravel: "red.500",
+};
+
+const database = {
+  mysql: "green.400",
+};
+
+const SKILLS_LEVEL_1 = {
+  graphql: "purple.400",
+  mongodb: "green.500",
+};
+
+const Content = ({ children }) => <Box my={2}>{children}</Box>;
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+    <App>
+      <Box
+        as='haeder'
+        h='48px'
+        className='blue'
+        width='full'
+        position='fixed'
+        d='flex'
+        top='0'>
+        <Text textAlign='center' w='full' as='h1' fontWeight='bold'>
+          Yz's Resume
+        </Text>
+      </Box>
+      <Box as='main' my={4} px={4}>
+        <Box d='flex' flexDir={{ sm: "column", md: "row" }}>
+          <Box w='200px' h='200px' mx='auto' className='blue'>
+            {/* <Image /> */}
+          </Box>
+          <Box my={2}>
+            <Text textAlign='center' as='h2' fontWeight='bold'>
+              Frontend Developer
+            </Text>
+            <Text>Skills</Text>
+            {Object.entries(SKILLS).map(([skill, color]) => (
+              <Badge colorScheme={color}>{skill}</Badge>
+            ))}
+          </Box>
+          <Box my={2}>
+            <Text
+              textAlign='center'
+              as='h2'
+              fontWeight='bold'
+              borderBottom='1px solid black'>
+              Professional Experience
+            </Text>
+            <Content>
+              <Text as='p'>
+                <Text as='span' d='inline-block' fontWeight='bold'>
+                  Frontend Developer,{" "}
+                </Text>{" "}
+                one and half year experience and my first software job in a
+                startup{" "}
+                <Tooltip label='jobstreet link' fontSize='md'>
+                  <Link
+                    textDecor='underline'
+                    color='blue.700'
+                    href='https://www.jobstreet.com.my/en/companies/1311338-ascend-com'>
+                    company
+                  </Link>
+                </Tooltip>{" "}
+                since last year.
+              </Text>
+            </Content>
+            <Content>
+              <Text>My details:</Text>
+              <UnorderedList>
+                <ListItem>25 years old, male, Chinese.</ListItem>
+                <ListItem>
+                  Self taught software knowledge from google, youtube and udemy.
+                </ListItem>
+              </UnorderedList>
+            </Content>
+            <Content>
+              <Text>Target:</Text>
+              <Text>
+                i'd like to create great UI/UX user experience (clean and
+                smooth). More details is like a popup container, it will
+                smoothly show up instead of just show it for the user.
+              </Text>
+            </Content>
+          </Box>
+        </Box>
+      </Box>
+      <Box as='footer' px={4}>
+        {" "}
+        footer
+      </Box>
+    </App>
+  );
 }
