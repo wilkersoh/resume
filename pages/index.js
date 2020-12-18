@@ -4,11 +4,11 @@ import {
   Text,
   Badge,
   UnorderedList,
+  OrderedList,
   ListItem,
   ListIcon,
   Tooltip,
   Link,
-  Divider,
 } from "@chakra-ui/react";
 import App from "../components/App";
 
@@ -34,7 +34,11 @@ const SKILLS_LEVEL_1 = {
   mongodb: "green.500",
 };
 
-const Content = ({ children }) => <Box my={2}>{children}</Box>;
+const Content = ({ children }) => (
+  <Box px={4} my={2}>
+    {children}
+  </Box>
+);
 
 export default function Home() {
   return (
@@ -42,19 +46,23 @@ export default function Home() {
       <Box
         as='haeder'
         h='48px'
-        className='blue'
         width='full'
         position='fixed'
-        d='flex'
-        top='0'>
-        <Text textAlign='center' w='full' as='h1' fontWeight='bold'>
+        textAlign='center'
+        boxShadow='lg'
+        top='0'
+        color='white'
+        style={{ backgroundColor: "rgb(32, 35, 43)" }}>
+        <Text as='h1' d='block' fontWeight='bold' my={2}>
           Yz's Resume
         </Text>
       </Box>
-      <Box as='main' my={4} px={4}>
+      <Box as='main'>
         <Box d='flex' flexDir={{ sm: "column", md: "row" }}>
-          <Box w='200px' h='200px' mx='auto' className='blue'>
-            {/* <Image /> */}
+          <Box style={{ backgroundColor: "rgb(40, 44, 53)" }} w='full' py={8}>
+            <Box w='200px' h='200px' mx='auto' className='blue'>
+              {/* <Image /> */}
+            </Box>
           </Box>
           <Box my={2}>
             <Text textAlign='center' as='h2' fontWeight='bold'>
@@ -62,7 +70,9 @@ export default function Home() {
             </Text>
             <Text>Skills</Text>
             {Object.entries(SKILLS).map(([skill, color]) => (
-              <Badge colorScheme={color}>{skill}</Badge>
+              <Badge key={skill} colorScheme={color}>
+                {skill}
+              </Badge>
             ))}
           </Box>
           <Box my={2}>
@@ -71,50 +81,75 @@ export default function Home() {
               as='h2'
               fontWeight='bold'
               borderBottom='1px solid black'>
-              Professional Experience
+              WORK HISTORY
             </Text>
             <Content>
-              <Text as='p'>
-                <Text as='span' d='inline-block' fontWeight='bold'>
-                  Frontend Developer,{" "}
-                </Text>{" "}
-                one and half year experience and my first software job in a
-                startup{" "}
-                <Tooltip label='jobstreet link' fontSize='md'>
-                  <Link
-                    textDecor='underline'
-                    color='blue.700'
-                    href='https://www.jobstreet.com.my/en/companies/1311338-ascend-com'>
-                    company
-                  </Link>
-                </Tooltip>{" "}
-                since last year.
-              </Text>
+              <Box d='flex' flexDir={{ sm: "column", md: "row" }}>
+                <Text color='gray.600'>May 2019 - Sep 2020</Text>
+                <Box>
+                  <Text as='p'>
+                    <Text as='span' fontWeight='bold'>
+                      As Junior Frontend Developer position in
+                    </Text>{" "}
+                    <Tooltip label='jobstreet link' fontSize='md'>
+                      <Link
+                        textDecor='underline'
+                        color='blue.700'
+                        target='_blank'
+                        href='https://www.jobstreet.com.my/en/companies/1311338-ascend-com'>
+                        Ascendcom Johor Bahru.
+                      </Link>
+                    </Tooltip>
+                  </Text>
+                  <UnorderedList>
+                    <ListItem>
+                      Provided event type website / small game / Shopping mall
+                      system for singapore client.
+                    </ListItem>
+                    <ListItem>
+                      Needed customise UI Design skills (raw css/scss).
+                    </ListItem>
+                    <ListItem>
+                      Consulted with singapore company on project status and
+                      something didn't make sense.
+                    </ListItem>
+                    <ListItem>
+                      Needed cross site skills set (Frontend and backend).
+                    </ListItem>
+                  </UnorderedList>
+                </Box>
+              </Box>
             </Content>
             <Content>
               <Text>My details:</Text>
               <UnorderedList>
                 <ListItem>25 years old, male, Chinese.</ListItem>
                 <ListItem>
-                  Self taught software knowledge from google, youtube and udemy.
+                  Self taught software knowledge from google, youtube and online
+                  courses.
+                </ListItem>
+                <ListItem>
+                  Passionate in javascript programming language.
                 </ListItem>
               </UnorderedList>
             </Content>
             <Content>
               <Text>Target:</Text>
               <Text>
-                i'd like to create great UI/UX user experience (clean and
-                smooth). More details is like a popup container, it will
-                smoothly show up instead of just show it for the user.
+                Provide a clean and smooth user experience interface for user.
+                More specific like a popup container, it will smoothly show up
+                instead of just show it for the user. In logical, it more make
+                sense for something ready to show.
               </Text>
             </Content>
           </Box>
         </Box>
       </Box>
-      <Box as='footer' px={4}>
-        {" "}
-        footer
-      </Box>
+      <Box
+        as='footer'
+        px={4}
+        py={10}
+        style={{ backgroundColor: "rgb(32, 35, 43)" }}></Box>
     </App>
   );
 }
