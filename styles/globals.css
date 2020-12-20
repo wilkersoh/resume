@@ -17,8 +17,24 @@ a {
 
 #__next {
   /* background-color: #2d3748; */
-  background-color: rgba(228, 228, 228, 0.5);
   min-height: 100vh;
+}
+
+#downLink {
+  transition: box-shadow 250ms ease-in-out;
+}
+#downLink div {
+  transition: top 300ms ease-in-out;
+}
+#downLink:hover {
+  background-color: #e2e8f0;
+  box-shadow: -2px -1px 19px -3px rgba(0, 0, 0, 0.25);
+}
+#downLink:hover div {
+  top: 45%;
+}
+#downLink:hover svg {
+  stroke: rgb(13, 192, 13);
 }
 
 .blue {

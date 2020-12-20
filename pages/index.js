@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Image from "next/image";
+import Nextlink from "next/link";
 import {
   Box,
   Text,
@@ -11,6 +13,9 @@ import {
   Link,
 } from "@chakra-ui/react";
 import App from "../components/App";
+import Medium from "../icons/Medium";
+import Github from "../icons/Github";
+import Download from "../icons/Download";
 
 const SKILLS = {
   html: "red.500",
@@ -53,6 +58,7 @@ export default function Home() {
         left='0'
         top='0'
         color='white'
+        zIndex={2}
         style={{ backgroundColor: "rgb(32, 35, 43)" }}>
         <Text as='h1' d='block' fontWeight='bold' my={2}>
           Yz's Resume
@@ -65,89 +71,44 @@ export default function Home() {
               {/* <Image /> */}
             </Box>
           </Box>
-          <Box as='section' mx='auto' maxW='1280px'>
-            <Content my={2}>
-              <Text
-                textAlign='center'
-                fontSize='20px'
-                as='h1'
-                fontWeight='bold'>
-                Frontend Developer
-              </Text>
-              <Text fontWeight='medium'>Skills</Text>
-              {Object.entries(SKILLS).map(([skill, color]) => (
-                <Badge fontSize='18px' key={skill} colorScheme={color}>
-                  {skill}
-                </Badge>
-              ))}
-            </Content>
-            <Box my={2}>
-              <Text
-                textAlign='center'
-                as='h2'
-                fontWeight='bold'
-                borderBottom='1px solid black'>
-                WORK HISTORY
-              </Text>
-              <Content>
-                <Box d='flex' flexDir={{ sm: "column", md: "row" }}>
-                  <Text color='gray.600'>May 2019 - Sep 2020</Text>
-                  <Box>
-                    <Text as='p'>
-                      <Text as='span' fontWeight='bold'>
-                        As Junior Frontend Developer position in
-                      </Text>{" "}
-                      <Tooltip label='jobstreet link' fontSize='md'>
-                        <Link
-                          textDecor='underline'
-                          color='blue.700'
-                          target='_blank'
-                          href='https://www.jobstreet.com.my/en/companies/1311338-ascend-com'>
-                          Ascendcom Johor Bahru.
-                        </Link>
-                      </Tooltip>
-                    </Text>
-                    <UnorderedList>
-                      <ListItem>
-                        Provided event type website / small game / Shopping mall
-                        system for singapore client.
-                      </ListItem>
-                      <ListItem>
-                        Needed customise UI Design skills (raw css/scss).
-                      </ListItem>
-                      <ListItem>
-                        Consulted with singapore company on project status and
-                        something didn't make sense.
-                      </ListItem>
-                      <ListItem>
-                        Needed cross site skills set (Frontend and backend).
-                      </ListItem>
-                    </UnorderedList>
+          <Box
+            py={2}
+            style={{ backgroundColor: "rgba(228, 228, 228, 0.5)" }}
+            d='flex'
+            flexDir='column'
+            w='full'>
+            <Box
+              w={{ sm: "100%", md: "full" }}
+              maxW='600px'
+              height='860px'
+              position='relative'
+              overflow='hidden'
+              mx='auto'>
+              <Link href='/images/resume.png' download='yz-resume'>
+                <Box
+                  id='downLink'
+                  position='absolute'
+                  bottom='0'
+                  right='0'
+                  height='100px'
+                  w='150px'
+                  bgColor='gray.200'
+                  borderTopLeftRadius='100px'
+                  zIndex={1}>
+                  <Box
+                    position='absolute'
+                    left='50%'
+                    top='50%'
+                    transform='translate(-25%, -25%)'>
+                    <Download />
                   </Box>
                 </Box>
-              </Content>
-              <Content>
-                <Text>My details:</Text>
-                <UnorderedList>
-                  <ListItem>25 years old, male, Chinese.</ListItem>
-                  <ListItem>
-                    Self taught software knowledge from google, youtube and
-                    online courses.
-                  </ListItem>
-                  <ListItem>
-                    Passionate in javascript programming language.
-                  </ListItem>
-                </UnorderedList>
-              </Content>
-              <Content>
-                <Text>Target:</Text>
-                <Text>
-                  Provide a clean and smooth user experience interface for user.
-                  More specific like a popup container, it will smoothly show up
-                  instead of just show it for the user. In logical, it more make
-                  sense for something ready to show.
-                </Text>
-              </Content>
+              </Link>
+              <Image
+                src='/images/resume.png'
+                layout='fill'
+                objectFit='contain'
+              />
             </Box>
           </Box>
         </Box>
@@ -156,7 +117,12 @@ export default function Home() {
         as='footer'
         px={4}
         py={10}
-        style={{ backgroundColor: "rgb(32, 35, 43)" }}></Box>
+        style={{ backgroundColor: "rgb(40, 44, 53)" }}>
+        <Box d='flex' justifyContent='center' className='blue'>
+          <Medium />
+          <Github />
+        </Box>
+      </Box>
     </App>
   );
 }
