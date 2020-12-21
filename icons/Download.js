@@ -4,12 +4,12 @@ const Download = (props) => (
   <Box
     as='svg'
     xmlns='http://www.w3.org/2000/svg'
-    viewBox='0 0 32 24'
+    viewBox='0 0 40 40'
     stroke='gray.500'
     strokeLinecap='square'
     fill='none'
-    width='31.998px'
-    height='23px'
+    width='40px'
+    height='40px'
     color='gray.500'
     {...props}>
     <path

@@ -39,12 +39,6 @@ const SKILLS_LEVEL_1 = {
   mongodb: "green.500",
 };
 
-const Content = ({ children }) => (
-  <Box px={4} my={2}>
-    {children}
-  </Box>
-);
-
 export default function Home() {
   return (
     <App>
@@ -73,15 +67,17 @@ export default function Home() {
           </Box>
           <Box
             py={2}
-            style={{ backgroundColor: "rgba(228, 228, 228, 0.5)" }}
+            style={{ backgroundColor: "rgba(242, 242, 242, 0.5)" }}
             d='flex'
             flexDir='column'
             w='full'>
             <Box
-              w={{ sm: "100%", md: "full" }}
+              w={{ sm: "100%" }}
+              // h={{ sm: "650px" }}
               maxW='600px'
-              height='860px'
+              h={{ sm: "800px", md: "1128px" }}
               position='relative'
+              boxShadow='2xl'
               overflow='hidden'
               mx='auto'>
               <Link href='/images/resume.png' download='yz-resume'>
@@ -90,16 +86,12 @@ export default function Home() {
                   position='absolute'
                   bottom='0'
                   right='0'
-                  height='100px'
+                  h='100px'
                   w='150px'
                   bgColor='gray.200'
-                  borderTopLeftRadius='100px'
+                  borderTopLeftRadius='100%'
                   zIndex={1}>
-                  <Box
-                    position='absolute'
-                    left='50%'
-                    top='50%'
-                    transform='translate(-25%, -25%)'>
+                  <Box position='absolute' right='35px' bottom='20px'>
                     <Download />
                   </Box>
                 </Box>
@@ -115,12 +107,43 @@ export default function Home() {
       </Box>
       <Box
         as='footer'
+        d='flex'
+        flexDir={{ sm: "column", lg: "row" }}
+        alignItems='center'
+        textAlign={{ sm: "center", lg: "left" }}
+        justifyContent='space-around'
         px={4}
         py={10}
         style={{ backgroundColor: "rgb(40, 44, 53)" }}>
-        <Box d='flex' justifyContent='center' className='blue'>
-          <Medium />
-          <Github />
+        <Box>
+          <Box>FullName: Soh Yong Yee</Box>
+          <Box>
+            <Text>
+              <Link
+                textDecor='underline'
+                color='blue.600'
+                target='_blank'
+                href='https://dayfruit.staging.selfpaths.com/'>
+                Project
+              </Link>{" "}
+              built with nextjs, graphql, token base Auth.
+            </Text>
+          </Box>
+        </Box>
+        <Box d='flex' justifyContent='center'>
+          <Link
+            href='https://laoyeche.medium.com/'
+            _focus={{ outline: 0 }}
+            target='_blank'>
+            <Medium />
+          </Link>
+          <Link
+            href='https://github.com/wilkersoh'
+            _focus={{ outline: 0 }}
+            border='none'
+            target='_blank'>
+            <Github />
+          </Link>
         </Box>
       </Box>
     </App>

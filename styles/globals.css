@@ -21,18 +21,21 @@ a {
 }
 
 #downLink {
-  transition: box-shadow 250ms ease-in-out;
+  transition: box-shadow 250ms ease-in-out, height 300ms ease-in-out,
+    width 300ms ease-in-out;
 }
 #downLink div {
   transition: top 300ms ease-in-out;
 }
 #downLink:hover {
-  background-color: #e2e8f0;
+  height: 150px;
+  width: 200px;
+  background-color: #cbe0fc;
   box-shadow: -2px -1px 19px -3px rgba(0, 0, 0, 0.25);
 }
-#downLink:hover div {
+/* #downLink:hover div {
   top: 45%;
-}
+} */
 #downLink:hover svg {
   stroke: rgb(13, 192, 13);
 }
