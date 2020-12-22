@@ -1,17 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Nextlink from "next/link";
-import {
-  Box,
-  Text,
-  Badge,
-  UnorderedList,
-  OrderedList,
-  ListItem,
-  ListIcon,
-  Tooltip,
-  Link,
-} from "@chakra-ui/react";
+import { Box, Text, UnorderedList, ListItem, Link } from "@chakra-ui/react";
 import App from "../components/App";
 import Medium from "../icons/Medium";
 import Github from "../icons/Github";
@@ -42,6 +32,9 @@ const SKILLS_LEVEL_1 = {
 export default function Home() {
   return (
     <App>
+      <Head>
+        <title>Yz's resume</title>
+      </Head>
       <Box
         as='haeder'
         h='48px'
@@ -60,9 +53,16 @@ export default function Home() {
       </Box>
       <Box as='main' flex={1} w='full'>
         <Box d='flex' flexDir={{ sm: "column" }}>
-          <Box style={{ backgroundColor: "rgb(40, 44, 53)" }} w='full' py={8}>
-            <Box w='200px' h='200px' mx='auto' className='blue'>
-              {/* <Image /> */}
+          <Box
+            style={{ backgroundColor: "rgb(40, 44, 53)" }}
+            w='full'
+            py={{ sm: 8, md: 2 }}>
+            <Box
+              w={{ sm: "200px", md: "350px" }}
+              h={{ sm: "200px", md: "350px" }}
+              mx='auto'
+              position='relative'>
+              <Image src='/images/yz.jpg' layout='fill' objectFit='contain' />
             </Box>
           </Box>
           <Box
@@ -111,23 +111,42 @@ export default function Home() {
         flexDir={{ sm: "column", lg: "row" }}
         alignItems='center'
         textAlign={{ sm: "center", lg: "left" }}
-        justifyContent='space-around'
+        justifyContent={{ sm: "space-around", lg: "center" }}
         px={4}
         py={10}
         style={{ backgroundColor: "rgb(40, 44, 53)" }}>
-        <Box>
-          <Box>FullName: Soh Yong Yee</Box>
+        <Box textAlign='left' mx={{ sm: "auto", lg: 0 }} pr={{ lg: 10 }}>
+          <Box color='white'>Developer: Soh Yong Yee</Box>
           <Box>
-            <Text>
-              <Link
-                textDecor='underline'
-                color='blue.600'
-                target='_blank'
-                href='https://dayfruit.staging.selfpaths.com/'>
-                Project
-              </Link>{" "}
-              built with nextjs, graphql, token base Auth.
-            </Text>
+            <Box d='flex' flexDir={{ sm: "column", lg: "row" }} color='white'>
+              <Text pr={{ md: 6 }}>
+                <Link
+                  textDecor='underline'
+                  color='blue.600'
+                  target='_blank'
+                  href='https://dayfruit.staging.selfpaths.com/'>
+                  Lastest Project
+                </Link>{" "}
+                built with:
+              </Text>
+              <UnorderedList>
+                <ListItem>nextjs</ListItem>
+                <ListItem>graphql</ListItem>
+                <ListItem>token base Auth</ListItem>
+                <ListItem>Custom CMS Backend</ListItem>
+              </UnorderedList>
+            </Box>
+            <Box
+              d='flex'
+              flexDir={{ sm: "column", lg: "row" }}
+              color='white'
+              mt={4}>
+              <Text pr={{ md: 4 }}>Project uncompleted part:</Text>
+              <UnorderedList>
+                <ListItem>Back button(top right)</ListItem>
+                <ListItem>Auth0 Login</ListItem>
+              </UnorderedList>
+            </Box>
           </Box>
         </Box>
         <Box d='flex' justifyContent='center'>
