@@ -51,7 +51,7 @@ export default function Home() {
           Yz's Resume
         </Text>
       </Box>
-      <Box as='main' flex={1} w='full'>
+      <Box as='main' w='full'>
         <Box d='flex' flexDir={{ sm: "column" }}>
           <Box
             style={{ backgroundColor: "rgb(40, 44, 53)" }}
@@ -70,12 +70,12 @@ export default function Home() {
             style={{ backgroundColor: "rgba(242, 242, 242, 0.5)" }}
             d='flex'
             flexDir='column'
+            h='full'
             w='full'>
             <Box
               w={{ sm: "100%" }}
-              // h={{ sm: "650px" }}
+              h={{ sm: "760px", md: "1128px" }}
               maxW='600px'
-              h={{ sm: "800px", md: "1128px" }}
               position='relative'
               boxShadow='2xl'
               overflow='hidden'
@@ -130,9 +130,9 @@ export default function Home() {
                 built with:
               </Text>
               <UnorderedList>
-                <ListItem>nextjs</ListItem>
-                <ListItem>graphql</ListItem>
-                <ListItem>token base Auth</ListItem>
+                <ListItem>Nextjs</ListItem>
+                <ListItem>Graphql</ListItem>
+                <ListItem>Token base Auth</ListItem>
                 <ListItem>Custom CMS Backend</ListItem>
               </UnorderedList>
             </Box>
@@ -149,7 +149,7 @@ export default function Home() {
             </Box>
           </Box>
         </Box>
-        <Box d='flex' justifyContent='center'>
+        <Box d='flex' justifyContent='center' mt={{ sm: 8, lg: 0 }}>
           <Link
             href='https://laoyeche.medium.com/'
             _focus={{ outline: 0 }}
