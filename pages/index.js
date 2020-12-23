@@ -115,7 +115,11 @@ export default function Home() {
         px={4}
         py={10}
         style={{ backgroundColor: "rgb(40, 44, 53)" }}>
-        <Box textAlign='left' mx={{ sm: "auto", lg: 0 }} pr={{ lg: 10 }}>
+        <Box
+          textAlign='left'
+          mx={{ sm: "auto", lg: 0 }}
+          pr={{ lg: 10 }}
+          fontSize={{ lg: "12px" }}>
           <Box color='white'>Developer: Soh Yong Yee</Box>
           <Box>
             <Box d='flex' flexDir={{ sm: "column", lg: "row" }} color='white'>
