@@ -123,7 +123,7 @@ export default function Home() {
           <Box color='white'>Developer: Soh Yong Yee</Box>
           <Box>
             <Box d='flex' flexDir={{ sm: "column", lg: "row" }} color='white'>
-              <Text pr={{ md: 6 }}>
+              <Text pr={{ md: 5 }}>
                 <Link
                   textDecor='underline'
                   color='blue.600'
@@ -147,7 +147,6 @@ export default function Home() {
               mt={4}>
               <Text pr={{ md: 4 }}>Project uncompleted part:</Text>
               <UnorderedList>
-                <ListItem>Back button(top right)</ListItem>
                 <ListItem>Auth0 Login</ListItem>
               </UnorderedList>
             </Box>
