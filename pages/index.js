@@ -7,28 +7,6 @@ import Medium from "../icons/Medium";
 import Github from "../icons/Github";
 import Download from "../icons/Download";
 
-const SKILLS = {
-  html: "red.500",
-  css: "blue.500",
-  scss: "red.300",
-  javascript: "yellow.700",
-  git: "red.400",
-};
-
-const FRAMEWORK = {
-  react: "blue.500",
-  laravel: "red.500",
-};
-
-const database = {
-  mysql: "green.400",
-};
-
-const SKILLS_LEVEL_1 = {
-  graphql: "purple.400",
-  mongodb: "green.500",
-};
-
 export default function Home() {
   return (
     <App>
@@ -138,16 +116,6 @@ export default function Home() {
                 <ListItem>Graphql</ListItem>
                 <ListItem>Token base Auth</ListItem>
                 <ListItem>Custom CMS Backend</ListItem>
-              </UnorderedList>
-            </Box>
-            <Box
-              d='flex'
-              flexDir={{ sm: "column", lg: "row" }}
-              color='white'
-              mt={4}>
-              <Text pr={{ md: 4 }}>Project uncompleted part:</Text>
-              <UnorderedList>
-                <ListItem>Auth0 Login</ListItem>
               </UnorderedList>
             </Box>
           </Box>
