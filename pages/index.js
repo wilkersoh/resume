@@ -113,6 +113,8 @@ export default function Home() {
               </Text>
               <UnorderedList>
                 <ListItem>Nextjs</ListItem>
+                <ListItem>Mongodb</ListItem>
+                <ListItem>Chakra-ui (styled component)</ListItem>
                 <ListItem>Graphql</ListItem>
                 <ListItem>Token base Auth</ListItem>
                 <ListItem>Custom CMS Backend</ListItem>
