@@ -117,6 +117,7 @@ export default function Home() {
                 <ListItem>Chakra-ui (styled component)</ListItem>
                 <ListItem>Graphql</ListItem>
                 <ListItem>Token base Auth</ListItem>
+                <ListItem>Refresh token</ListItem>
                 <ListItem>Custom CMS Backend</ListItem>
               </UnorderedList>
             </Box>
