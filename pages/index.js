@@ -58,7 +58,7 @@ export default function Home() {
               boxShadow='2xl'
               overflow='hidden'
               mx='auto'>
-              <Link href='/images/resume.png' download='yz-resume'>
+              <Link href='/images/yz-resume.pdf' download='yz-resume'>
                 <Box
                   id='downLink'
                   position='absolute'
@@ -75,7 +75,7 @@ export default function Home() {
                 </Box>
               </Link>
               <Image
-                src='/images/resume.png'
+                src='/images/yz-resume.png'
                 layout='fill'
                 objectFit='contain'
               />
