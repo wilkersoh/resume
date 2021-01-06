@@ -82,6 +82,54 @@ export default function Home() {
             </Box>
           </Box>
         </Box>
+        <Box d='flex' color='white' py={4} bg='gray.700'>
+          <Box mx={{ lg: "auto" }} pl={{ sm: 4 }}>
+            <Text textAlign={{ lg: "center" }} as='h2' fontSize='1.5rem'>
+              A latest project:{" "}
+              <Link
+                textDecor='underline'
+                color='blue.600'
+                target='_blank'
+                href='https://dayfruit.staging.selfpaths.com/'>
+                Day Fruit
+              </Link>
+            </Text>
+            <Box d='flex' flexDir={{ sm: "column", lg: "row" }}>
+              <Box>
+                <Text>Bulit with: </Text>
+                <UnorderedList>
+                  <ListItem>Nextjs (React)</ListItem>
+                  <ListItem>Chakra-ui (styled component)</ListItem>
+                  <ListItem>Graphql</ListItem>
+                  <ListItem>Token base Auth</ListItem>
+                  <ListItem>Refresh token</ListItem>
+                  <ListItem>Mongodb</ListItem>
+                  <ListItem>Custom CMS Backend</ListItem>
+                </UnorderedList>
+              </Box>
+              <Box
+                mt={2}
+                ml={{ lg: 6 }}
+                borderTop={{ sm: "1px solid gray", lg: "none" }}>
+                <Text mt={1}>
+                  Please Click{" "}
+                  <Link
+                    textDecor='underline'
+                    color='blue.600'
+                    target='_blank'
+                    href='https://dayfruit.staging.selfpaths.com/cms'>
+                    here
+                  </Link>{" "}
+                  to enter cms
+                </Text>
+                <Box mt={1}>
+                  <Text>Email: admin@mail.io</Text>
+                  <Text>Password: password</Text>
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
       </Box>
       <Box
         as='footer'
@@ -93,36 +141,6 @@ export default function Home() {
         px={4}
         py={10}
         style={{ backgroundColor: "rgb(40, 44, 53)" }}>
-        <Box
-          textAlign='left'
-          mx={{ sm: "auto", lg: 0 }}
-          pr={{ lg: 10 }}
-          fontSize={{ lg: "12px" }}>
-          <Box color='white'>Developer: Soh Yong Yee</Box>
-          <Box>
-            <Box d='flex' flexDir={{ sm: "column", lg: "row" }} color='white'>
-              <Text pr={{ md: 5 }}>
-                <Link
-                  textDecor='underline'
-                  color='blue.600'
-                  target='_blank'
-                  href='https://dayfruit.staging.selfpaths.com/'>
-                  Lastest Project
-                </Link>{" "}
-                built with:
-              </Text>
-              <UnorderedList>
-                <ListItem>Nextjs</ListItem>
-                <ListItem>Mongodb</ListItem>
-                <ListItem>Chakra-ui (styled component)</ListItem>
-                <ListItem>Graphql</ListItem>
-                <ListItem>Token base Auth</ListItem>
-                <ListItem>Refresh token</ListItem>
-                <ListItem>Custom CMS Backend</ListItem>
-              </UnorderedList>
-            </Box>
-          </Box>
-        </Box>
         <Box d='flex' justifyContent='center' mt={{ sm: 8, lg: 0 }}>
           <Link
             href='https://laoyeche.medium.com/'
