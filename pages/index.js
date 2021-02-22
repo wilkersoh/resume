@@ -96,7 +96,7 @@ export default function Home() {
                 textDecor='underline'
                 color='blue.600'
                 target='_blank'
-                href='https://dayfruit.staging.selfpaths.com/'>
+                href='https://creative.staging.selfpaths.com/'>
                 e-commerce
               </Link>
             </Text>
