@@ -6,6 +6,7 @@ import App from "../components/App";
 import Medium from "../icons/Medium";
 import Github from "../icons/Github";
 import Download from "../icons/Download";
+import Instagram from "../icons/Instagram";
 
 export default function Home() {
   return (
@@ -82,19 +83,24 @@ export default function Home() {
             </Box>
           </Box>
         </Box>
-        <Box d='flex' color='white' py={4} bg='gray.700'>
+        <Box
+          d='flex'
+          color='white'
+          py={10}
+          bg='gray.500'
+          justifyContent='center'>
           <Box mx={{ lg: "auto" }} pl={{ sm: 4 }}>
             <Text textAlign={{ lg: "center" }} as='h2' fontSize='1.5rem'>
-              A latest project:{" "}
+              Latest project{" "}
               <Link
                 textDecor='underline'
                 color='blue.600'
                 target='_blank'
                 href='https://dayfruit.staging.selfpaths.com/'>
-                Day Fruit
+                e-commerce
               </Link>
             </Text>
-            <Box d='flex' flexDir={{ sm: "column", lg: "row" }}>
+            {/* <Box d='flex' flexDir={{ sm: "column", lg: "row" }}>
               <Box>
                 <Text>Bulit with: </Text>
                 <UnorderedList>
@@ -110,7 +116,7 @@ export default function Home() {
               <Box
                 mt={2}
                 ml={{ lg: 6 }}
-                borderTop={{ sm: "1px solid gray", lg: "none" }}>
+                borderTop={{ sm: "1px solid #b1b1b1", lg: "none" }}>
                 <Text mt={1}>
                   Please Click{" "}
                   <Link
@@ -127,7 +133,7 @@ export default function Home() {
                   <Text>Password: password</Text>
                 </Box>
               </Box>
-            </Box>
+            </Box> */}
           </Box>
         </Box>
       </Box>
@@ -142,11 +148,19 @@ export default function Home() {
         py={10}
         style={{ backgroundColor: "rgb(40, 44, 53)" }}>
         <Box d='flex' justifyContent='center' mt={{ sm: 8, lg: 0 }}>
-          <Link
+          {/* <Link
             href='https://laoyeche.medium.com/'
             _focus={{ outline: 0 }}
             target='_blank'>
             <Medium />
+          </Link> */}
+          <Link
+            href='https://www.instagram.com/hello__yz/'
+            _focus={{ outline: 0 }}
+            // style={{ border: "2px solid blue" }}
+            border='none'
+            target='_blank'>
+            <Instagram />
           </Link>
           <Link
             href='https://github.com/wilkersoh'

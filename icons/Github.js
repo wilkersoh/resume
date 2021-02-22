@@ -4,7 +4,7 @@ const Github = (props) => (
   <Box
     as='svg'
     xmlns='http://www.w3.org/2000/svg'
-    viewBox='-7 -5 35 35'
+    viewBox='-7 -3 32 32'
     stroke='black'
     strokeLinecap='square'
     fill='none'
