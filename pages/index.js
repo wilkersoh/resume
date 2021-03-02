@@ -59,7 +59,7 @@ export default function Home() {
               boxShadow='2xl'
               overflow='hidden'
               mx='auto'>
-              <Link href='/images/yz-resume.pdf' download='yz-resume'>
+              <Link href='/images/yz-resume.docx' download='yz-resume'>
                 <Box
                   id='downLink'
                   position='absolute'
@@ -100,40 +100,6 @@ export default function Home() {
                 e-commerce
               </Link>
             </Text>
-            {/* <Box d='flex' flexDir={{ sm: "column", lg: "row" }}>
-              <Box>
-                <Text>Bulit with: </Text>
-                <UnorderedList>
-                  <ListItem>Nextjs (React)</ListItem>
-                  <ListItem>Chakra-ui (styled component)</ListItem>
-                  <ListItem>Graphql</ListItem>
-                  <ListItem>Token base Auth</ListItem>
-                  <ListItem>Refresh token</ListItem>
-                  <ListItem>Mongodb</ListItem>
-                  <ListItem>Custom CMS Backend</ListItem>
-                </UnorderedList>
-              </Box>
-              <Box
-                mt={2}
-                ml={{ lg: 6 }}
-                borderTop={{ sm: "1px solid #b1b1b1", lg: "none" }}>
-                <Text mt={1}>
-                  Please Click{" "}
-                  <Link
-                    textDecor='underline'
-                    color='blue.600'
-                    target='_blank'
-                    href='https://dayfruit.staging.selfpaths.com/cms'>
-                    here
-                  </Link>{" "}
-                  to enter cms
-                </Text>
-                <Box mt={1}>
-                  <Text>Email: admin@mail.io</Text>
-                  <Text>Password: password</Text>
-                </Box>
-              </Box>
-            </Box> */}
           </Box>
         </Box>
       </Box>
@@ -148,16 +114,9 @@ export default function Home() {
         py={10}
         style={{ backgroundColor: "rgb(40, 44, 53)" }}>
         <Box d='flex' justifyContent='center' mt={{ sm: 8, lg: 0 }}>
-          {/* <Link
-            href='https://laoyeche.medium.com/'
-            _focus={{ outline: 0 }}
-            target='_blank'>
-            <Medium />
-          </Link> */}
           <Link
             href='https://www.instagram.com/hello__yz/'
             _focus={{ outline: 0 }}
-            // style={{ border: "2px solid blue" }}
             border='none'
             target='_blank'>
             <Instagram />
