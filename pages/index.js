@@ -58,6 +58,7 @@ export default function Home() {
               position='relative'
               boxShadow='2xl'
               overflow='hidden'
+              bgColor="#fff"
               mx='auto'>
               <Link href='/images/yz-resume.docx' download='yz-resume'>
                 <Box
